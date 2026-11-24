@@ -7,6 +7,14 @@ def fibonacci_iterative(n):
 
 print(fibonacci_iterative(n))
 
+import time
+
+start = time.perf_counter()
+fibonacci_iterative(30)
+end = time.perf_counter()
+
+print("Iterative execution time:", end - start, "seconds")
+
 n = n = int(input("Enter a number: "))
 def fibonacci_recursive(n):
     if n <= 1:
@@ -15,10 +23,9 @@ def fibonacci_recursive(n):
 
 print(fibonacci_recursive(n))
 
-import time
 
 start = time.perf_counter()
-fibonacci_iterative(30)
+fibonacci_recursive(30)
 end = time.perf_counter()
 
-print("Execution time:", end - start, "seconds")
+print("Recursive execution time:", end - start, "seconds")
