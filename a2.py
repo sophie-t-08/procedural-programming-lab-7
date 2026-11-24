@@ -14,3 +14,11 @@ def fibonacci_recursive(n):
     return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
 
 print(fibonacci_recursive(n))
+
+import time
+
+start = time.perf_counter()
+fibonacci_iterative(30)
+end = time.perf_counter()
+
+print("Execution time:", end - start, "seconds")
